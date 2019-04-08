@@ -1,0 +1,335 @@
+{
+    "/authentication/signin": {
+        "POST": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "userId"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "userId": "should have required property userId"
+                    },
+                    "properties": {
+                        "userId": "userId must be string"
+                    }
+                }
+            }
+        }
+    },
+    
+   
+"/authentication/driver_register": {
+        "POST": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                    "driver_name": {
+                        "type": "string"
+                    },
+                    "driver_phonenumber": {
+                        "type": "string"
+                    },
+                    "driver_email": {
+                        "type": "string"
+                    },
+                    "driver_password": {
+                        "type": "string"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "driver_name"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "driver_name": "should have required property driver_name"
+                    },
+                    "properties": {
+                        "driver_name": "driver_name must be string"
+                    }
+                }
+            }
+        }
+    },
+
+    "/authentication/driver_register_update": {
+        "POST": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                    "driver_id":{
+                        "type": "number"
+                    },
+                    "driver_name": {
+                        "type": "string"
+                    },
+                    "driver_phonenumber": {
+                        "type": "string"
+                    },
+                    "driver_email": {
+                        "type": "string"
+                    },
+                    "driver_password": {
+                        "type": "string"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "driver_name"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "driver_name": "should have required property driver_name"
+                    },
+                    "properties": {
+                        "driver_name": "driver_name must be string"
+                    }
+                }
+            }
+        }
+    },
+
+    "/authentication/driver_register_list": {
+        "GET": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                   
+                },
+        "additionalProperties": false,
+                "required": [
+                    
+                    
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                       
+                    },
+                    "properties": {
+                    }
+                }
+            }
+        }
+    },
+
+        "/authentication/driver_register_delete": {
+        "POST": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                    "driver_id":{
+                        "type": "number"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "driver_id"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "driver_id": "should have required property driver_id"
+                    },
+                    "properties": {
+                        "driver_id": "driver_name must be number"
+                    }
+                }
+            }
+        }
+    },
+
+     "/authentication/driver_register_fetch": {
+        "POST": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                    "driver_id":{
+                        "type": "number"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "driver_id"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "driver_id": "should have required property driver_id"
+                    },
+                    "properties": {
+                        "driver_id": "driver_name must be number"
+                    }
+                }
+            }
+        }
+    },
+
+    "/authentication/loginpages": {
+        "POST": {
+                 "body": {
+                 "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "userId"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "userId": "should have required property userId"
+                    },
+                    "properties": {
+                        "userId": "userId must be string"
+                    }
+                }
+            }
+        }
+    },
+
+    "/authentication/registerpage": {
+        "POST": {
+                 "body": {
+                 "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "mobile_number": {
+                        "type": "string"
+                    },
+                    "email_id": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "name"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "name": "should have required property userId"
+                    },
+                    "properties": {
+                        "name": "userId must be string"
+                    }
+                }
+            }
+        }
+    },
+
+   
+    "/registration/registeruser1": {
+        "POST": {
+            "body": {
+                "type": "object",
+                "properties": {
+                    "mac": {
+                        "type": "string"
+                    },
+		    "primaryEmail": {
+                        "type": "string"
+                    },
+                    "swVersion": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "middleName": {
+                        "type": "string"
+                    },
+                    "dob": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "userTag": {
+                        "type": "string"
+                    },
+		    "statusText": {
+			"type": "string"
+	  	    },
+		    "email":{
+                    	"type": "array",
+                        "minItems": 0,
+                        "items": [{
+                        	"type": "string"
+                         }]
+                    }, 
+                    "password": {
+                        "type": "string"
+                    }
+                },
+		"additionalProperties": false,
+                "required": [
+                    "mac",
+                    "swVersion",
+                    "firstName",
+                    "lastName",
+                    "dob",
+                    "gender",
+                    "userTag",
+		    "statusText",
+                    "password"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "mac": "should have required property mac",
+                        "swVersion": "should have required property swVersion",
+                        "firstName": "should have required property firstName",
+                        "lastName": "should have required property lastName",
+                        "dob": "should have required property dob",
+                        "gender": "should have required property gender",
+                        "userTag": "should have required property userTag",
+		        "statusText": "should have required property statusText",
+                        "password": "should have required property password"
+                    },
+                    "properties": {
+                        "mac": "mac should be string and of pattern - TBD",
+			"primaryEmail": "primaryEmail should be string and of pattern - TBD",
+                        "swVersion": "swVersion should be string and of pattern - TBD",
+                        "firstName": "firstName should be string and of pattern - TBD",
+                        "middleName": "middleName should be string and of pattern - TBD",
+                        "lastName": "lastName should be string and of pattern - TBD",
+                        "dob": "dob should be string and of pattern - TBD",
+                        "gender": "gender should be string and of pattern - TBD",
+                        "userTag": "userTag should be string and of pattern - TBD",
+			"statusText": "statusText should be string and of pattern - TBD",
+			"password": "password should be string and of pattern - TBD",
+			"email": "password should be array and of pattern - TBD"
+                    }
+                }
+            }
+        }
+    }
+}
