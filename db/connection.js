@@ -18,11 +18,11 @@ monitor.setLog((msg, info) => {
 var db;
 function getConnection() {
     const cn = {
-	  user: "byrggtypxtsfxw",
-	  password: "a9bb4801cb41689bd35754a75966634e9016558b58bdedd72de62a869c8d2d02",
-	  database: "da3s4aqotkcmoe",
+	  user: "fliwkupvmihqff",
+	  password: "8e35a9453ea003ce673b827e9fbf540dd2d518282c2ca52b58d447024030b901",
+	  database: "d5buup7u6c8g7d",
 	  port: 5432,
-	  host: "ec2-184-73-153-64.compute-1.amazonaws.com",
+	  host: "ec2-174-129-10-235.compute-1.amazonaws.com",
 	  ssl: true
 	};
 	db = pgp(cn); 

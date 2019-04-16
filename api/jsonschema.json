@@ -87,15 +87,15 @@
                 },
         "additionalProperties": false,
                 "required": [
-                    "driver_name"
+                    "driver_id"
                 ],
                 "errorMessage": {
                     "additionalProperties": "should not have additional properties",
                     "required": {
-                        "driver_name": "should have required property driver_name"
+                        "driver_id": "should have required property driver_id"
                     },
                     "properties": {
-                        "driver_name": "driver_name must be string"
+                        "driver_id": "driver_id must be number"
                     }
                 }
             }
@@ -171,12 +171,50 @@
                         "driver_id": "should have required property driver_id"
                     },
                     "properties": {
-                        "driver_id": "driver_name must be number"
+                        "driver_id": "driver_id must be number"
                     }
                 }
             }
         }
     },
+
+    "/authentication/driver_login": {
+        "POST": {
+            "body": {
+                 "type": "object",
+                "properties": {
+                    "login_id": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+        "additionalProperties": false,
+                "required": [
+                    "login_id"
+                ],
+                "errorMessage": {
+                    "additionalProperties": "should not have additional properties",
+                    "required": {
+                        "login_id": "should have required property login_id"
+                    },
+                    "properties": {
+                        "login_id": "login_id must be number"
+                    }
+                }
+            }
+        }
+    },
+
+
+
+
+
+
+
+
+
 
     "/authentication/loginpages": {
         "POST": {

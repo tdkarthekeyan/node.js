@@ -1,10 +1,12 @@
 "use strict";
 
 var express = require("express"),
+    cors = require("cors"),
     utils = require("../utils"),
     jsonschema = require("./jsonschema"),
     middleware = require("./middleware"),
-    cors = require("cors");
+    AuthController = require("../auth/AuthController"),
+    VerifyToken = require('../auth/VerifyToken');
 
 var app = express(),
 router = express.Router();
@@ -29,9 +31,10 @@ addRoute("/authentication/loginpages", "POST", [middleware.loginpages]);
 
 addRoute("/authentication/driver_register", "POST", [middleware.driver_register]);
 addRoute("/authentication/driver_register_update", "POST", [middleware.driver_register_update]);
-addRoute("/authentication/driver_register_list", "GET", [middleware.driver_register_list]);
+addRoute("/authentication/driver_register_list", "GET", [VerifyToken, middleware.driver_register_list]);
 addRoute("/authentication/driver_register_delete", "POST", [middleware.driver_register_delete]);
 addRoute("/authentication/driver_register_fetch", "POST", [middleware.driver_register_fetch]);
+addRoute("/authentication/driver_login", "POST", [middleware.driver_login]);
 
 app.use(router);
 

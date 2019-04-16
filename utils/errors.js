@@ -10,8 +10,13 @@ module.exports = {
         status: "Failure",
         code: 401
     },
+    "401": {
+        message: "Invalid Password",
+        status: "Failure",
+        code: 401
+    },
     "404": {
-        message: "Resource not available",
+        message: "Customer Account Not Found",
         status: "Failure",
         code: 404
     },
